@@ -1,0 +1,767 @@
+[
+    {
+        "id": "e6c1b73660e73e9d",
+        "type": "tab",
+        "label": "main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "926eb110344aab7b",
+        "type": "tab",
+        "label": "Futurepredictions",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2bf6f08979baa880",
+        "type": "tab",
+        "label": "prevPrediction",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "a7841362.ae40c",
+        "type": "ui_group",
+        "name": "RH and Temperature",
+        "tab": "2ff36ff5.bdc628",
+        "order": 1,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2ff36ff5.bdc628",
+        "type": "ui_tab",
+        "name": "Studio_control",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f999d74d9a2f2b7c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#2fbac1",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#2fbac1",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#2fbac1",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#63d3d9",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#2fbac1",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 5,
+                "py": 5
+            }
+        }
+    },
+    {
+        "id": "639c1d2b1a8b6c65",
+        "type": "mqtt-broker",
+        "name": "broker.hivemq.com",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "af6c8e9cce39bfd7",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "mqtts://e285e0ac8df4483eb93334cae8bcd4b3.s2.eu.hivemq.cloud:8883",
+        "port": "8883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "eb6957c5b2e6c25f",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "e285e0ac8df4483eb93334cae8bcd4b3.s2.eu.hivemq.cloud",
+        "port": "8883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "8df5368f0a4b97bb",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "a7841362.ae40c",
+        "order": 3,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "ea62e401e02cc2ea",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "a7841362.ae40c",
+        "order": 1,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "2ac8e3fa.8b8584",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "45a7034a.4a4d4c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "174c0ac00fb32bae",
+        "type": "ui_group",
+        "name": "future prediction",
+        "tab": "2ff36ff5.bdc628",
+        "order": 2,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "120be59f2e99dbf0",
+        "type": "ui_group",
+        "name": "prev_prediction",
+        "tab": "2ff36ff5.bdc628",
+        "order": 4,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da3d85041f5f7ac1",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "174c0ac00fb32bae",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7d89dc9574df4bc7",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "120be59f2e99dbf0",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "fb2867956d45a567",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "174c0ac00fb32bae",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "5e5dcf0749a20d0a",
+        "type": "ui_spacer",
+        "z": "e6c1b73660e73e9d",
+        "name": "spacer",
+        "group": "120be59f2e99dbf0",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "8ff1dfa276dfccee",
+        "type": "mqtt in",
+        "z": "e6c1b73660e73e9d",
+        "name": "",
+        "topic": "SensorData",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "af6c8e9cce39bfd7",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 310,
+        "y": 260,
+        "wires": [
+            [
+                "7782a1510fcf2ffd"
+            ]
+        ]
+    },
+    {
+        "id": "795943d8e89b8773",
+        "type": "ui_gauge",
+        "z": "e6c1b73660e73e9d",
+        "name": "",
+        "group": "a7841362.ae40c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7782a1510fcf2ffd",
+        "type": "switch",
+        "z": "e6c1b73660e73e9d",
+        "name": "hi",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Temperature",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Humidity",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 200,
+        "wires": [
+            [
+                "9f1442edee726cb3"
+            ],
+            [
+                "8ca8388b5bd95df1"
+            ]
+        ]
+    },
+    {
+        "id": "9f1442edee726cb3",
+        "type": "function",
+        "z": "e6c1b73660e73e9d",
+        "name": "temp",
+        "func": "var temperature = msg.payload.value;\n\n// Create a new message with the temperature value\nmsg.payload = temperature;\n\n// Send the new message to the output\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "795943d8e89b8773"
+            ]
+        ]
+    },
+    {
+        "id": "8ca8388b5bd95df1",
+        "type": "function",
+        "z": "e6c1b73660e73e9d",
+        "name": "humidity",
+        "func": "var humidity = msg.payload.value;\n\n// Create a new message with the temperature value\nmsg.payload = humidity;\n\n// Send the new message to the output\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "fe1da3439843fb2d"
+            ]
+        ]
+    },
+    {
+        "id": "fe1da3439843fb2d",
+        "type": "ui_gauge",
+        "z": "e6c1b73660e73e9d",
+        "name": "",
+        "group": "a7841362.ae40c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 800,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2b5f0c8b73a15b25",
+        "type": "inject",
+        "z": "926eb110344aab7b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "start",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "e13599ad75a72b77"
+            ]
+        ]
+    },
+    {
+        "id": "ab7548825cd37b5e",
+        "type": "ui_chart",
+        "z": "926eb110344aab7b",
+        "name": "",
+        "group": "174c0ac00fb32bae",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "label": "chart",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "D/M",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "80",
+        "ymax": "90",
+        "removeOlder": "1",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41262fab49ac2753",
+        "type": "debug",
+        "z": "926eb110344aab7b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "e13599ad75a72b77",
+        "type": "file in",
+        "z": "926eb110344aab7b",
+        "name": "hr",
+        "filename": "C:\\Users\\user\\PycharmProjects\\weather\\New folder\\forecast_data_future.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "537e8843807fa4b7",
+                "41262fab49ac2753"
+            ]
+        ]
+    },
+    {
+        "id": "537e8843807fa4b7",
+        "type": "csv",
+        "z": "926eb110344aab7b",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": false,
+        "include_null_values": false,
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "0ea33cc1522d0eb7",
+                "41262fab49ac2753"
+            ]
+        ]
+    },
+    {
+        "id": "0ea33cc1522d0eb7",
+        "type": "function",
+        "z": "926eb110344aab7b",
+        "name": "graph generate",
+        "func": "function toTimestamp(strDate) {\n    var datum = Date.parse(strDate);\n    return datum / 1000;\n}\n\nvar payload = msg.payload;\nvar data_out = [];\nvar a1 = [];\n\nfor (let i = 0; i < payload.length; i++) {\n    var dateStr = payload[i][\"date\"];\n    var dateObj = new Date(dateStr);\n    var timestamp = toTimestamp(dateStr);\n    var temp1 = { \"x\": dateObj, \"y\": parseInt(payload[i][\"forecast\"]) };\n    a1.push(temp1);\n}\n\ndata_out = [a1];\n\nmsg.payload = [{\n    \"series\": [\"date\"],\n    \"data\": data_out,\n    \"labels\": [\"date\"],\n    \"options\": {\n        \"scales\": {\n            \"xAxes\": [{\n                \"type\": \"time\",\n                \"time\": {\n                    \"unit\": \"day\",\n                    \"tooltipFormat\": \"ll\"\n                }\n            }]\n        }\n    }\n}];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "41262fab49ac2753",
+                "ab7548825cd37b5e"
+            ]
+        ]
+    },
+    {
+        "id": "ce012b45e2a6c0b3",
+        "type": "inject",
+        "z": "2bf6f08979baa880",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "start",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "4ee19e897c377aaf"
+            ]
+        ]
+    },
+    {
+        "id": "9995bb5ba82c10c9",
+        "type": "ui_chart",
+        "z": "2bf6f08979baa880",
+        "name": "",
+        "group": "120be59f2e99dbf0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "chart",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "D/M",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "80",
+        "ymax": "90",
+        "removeOlder": "4",
+        "removeOlderPoints": "1000",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6a57473f97a5620c",
+        "type": "debug",
+        "z": "2bf6f08979baa880",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4ee19e897c377aaf",
+        "type": "file in",
+        "z": "2bf6f08979baa880",
+        "name": "RH_past",
+        "filename": "C:\\Users\\user\\PycharmProjects\\weather\\past\\forecast_data_prev.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "97c3b026738fd394",
+                "6a57473f97a5620c"
+            ]
+        ]
+    },
+    {
+        "id": "97c3b026738fd394",
+        "type": "csv",
+        "z": "2bf6f08979baa880",
+        "name": "",
+        "sep": ",",
+        "hdrin": true,
+        "hdrout": "",
+        "multi": "mult",
+        "ret": "\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "d92b6231ec0a1325",
+                "6a57473f97a5620c"
+            ]
+        ]
+    },
+    {
+        "id": "d92b6231ec0a1325",
+        "type": "function",
+        "z": "2bf6f08979baa880",
+        "name": "graph generate",
+        "func": "function toTimestamp(strDate) {\n    var datum = Date.parse(strDate);\n    return datum / 1000;\n}\n\nvar payload = msg.payload;\nvar data_out = [];\nvar a1 = [];\n\nfor (let i = 0; i < payload.length; i++) {\n    var dateStr = payload[i][\"date\"];\n    var dateObj = new Date(dateStr);\n    var timestamp = toTimestamp(dateStr);\n    var temp1 = { \"x\": dateObj, \"y\": parseInt(payload[i][\"forecast\"]) };\n    a1.push(temp1);\n}\n\ndata_out = [a1];\n\nmsg.payload = [{\n    \"series\": [\"date\"],\n    \"data\": data_out,\n    \"labels\": [\"date\"],\n    \"options\": {\n        \"scales\": {\n            \"xAxes\": [{\n                \"type\": \"time\",\n                \"time\": {\n                    \"unit\": \"day\",\n                    \"tooltipFormat\": \"ll\"\n                }\n            }]\n        }\n    }\n}];\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 360,
+        "wires": [
+            [
+                "6a57473f97a5620c",
+                "9995bb5ba82c10c9"
+            ]
+        ]
+    }
+]

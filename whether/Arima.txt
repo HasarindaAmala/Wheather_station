@@ -1,0 +1,32 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+from sklearn.metrics import mean_squared_error
+from statsmodels.tsa.arima.model import ARIMA
+
+# Load the CSV file into a Pandas DataFrame
+df = pd.read_csv('relative_humidity_data.csv')
+
+# Convert the date column to a datetime object
+df['date'] = pd.to_datetime(df['date'])
+
+# Set the date column as the index of the DataFrame
+df.set_index('date', inplace=True)
+
+# Resample the DataFrame to a monthly frequency
+df_monthly = df.resample('M').mean().fillna(method='ffill')
+
+# Split the data into a training set and a testing set
+train = df_monthly.loc[:'2017']
+test = df_monthly.loc['2018':]
+
+# Fit an ARIMA model to the training set
+model = ARIMA(train, order=(1, 0, 0))
+results = model.fit()
+
+# Generate predictions for the testing set
+predictions = results.predict(start='2018-01-31', end='2023-12-31', typ='levels')
+
+# Save the predictions as a CSV file
+predictions.to_csv('relative_humidity_predictions.csv')

@@ -1,0 +1,27 @@
+#include <Wire.h> 
+#include <LiquidCrystal_I2C.h>
+
+#define analogPin A0 /* ESP8266 Analog Pin ADC0 = A0 */
+int adcValue = 0;  /* Variable to store Output of ADC */
+
+LiquidCrystal_I2C lcd(0x3F, 16, 2);
+
+void setup()
+{
+  lcd.init();
+  lcd.backlight();
+  lcd.setCursor(0,0);
+  lcd.print("ADC Value =      ");
+    
+}
+
+
+void loop()
+{
+  adcValue = analogRead(analogPin); /* Read the Analog Input value */
+  lcd.setCursor(0,0);
+  lcd.print("ADC Value =      "); 
+  lcd.setCursor(12, 0);
+  lcd.print(adcValue);
+  delay(1000);
+}
